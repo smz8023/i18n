@@ -1,10 +1,9 @@
 
 import * as vscode from 'vscode';
-import {fanyi} from './fanyi/index';
+import {fanyi} from './component/vscode.js';
 
-export function activate(context: vscode.ExtensionContext) {
+export function activate(context) {
 	
-
 	fanyi(context);
 
 	let disposable = vscode.commands.registerCommand('sy-i18n.helloWorld', () => {

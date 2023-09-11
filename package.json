@@ -2,7 +2,7 @@
 	"name": "sy-i18n",
 	"displayName": "sy-i18n",
 	"description": "翻译",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"engines": {
 		"vscode": "^1.60.0"
 	},
@@ -11,7 +11,8 @@
 		"Other"
 	],
 	"activationEvents": [
-		"*"
+		".js",
+		".vue"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -19,10 +20,6 @@
 			{
 				"command": "sy-i18n.helloWorld",
 				"title": "Hello World"
-			},
-			{
-				"command": "extension.提取中文",
-				"title": "提取此文件中文"
 			},
 			{
 				"command": "extension.翻译vue文件",
@@ -38,11 +35,6 @@
 				}
 			],
 			"fileTemplate": [
-				{
-					"when": "editorFocus",
-					"command": "extension.提取中文",
-					"group": "navigation"
-				},
 				{
 					"when": "editorFocus",
 					"command": "extension.翻译vue文件",
@@ -69,27 +61,38 @@
 		"test": "node ./out/test/runTest.js"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.60.0",
 		"@types/glob": "^7.1.3",
 		"@types/mocha": "^8.2.2",
 		"@types/node": "14.x",
-		"eslint": "^7.27.0",
+		"@types/vscode": "^1.60.0",
 		"@typescript-eslint/eslint-plugin": "^4.26.0",
 		"@typescript-eslint/parser": "^4.26.0",
+		"eslint": "^7.27.0",
 		"glob": "^7.1.7",
 		"mocha": "^8.4.0",
+		"ts-loader": "^9.2.2",
 		"typescript": "^4.3.2",
 		"vscode-test": "^1.5.2",
-		"ts-loader": "^9.2.2",
 		"webpack": "^5.38.1",
 		"webpack-cli": "^4.7.0"
 	},
 	"dependencies": {
+		"@babel/core": "^7.22.15",
+		"@babel/generator": "^7.22.15",
+		"@babel/parser": "^7.22.16",
+		"@babel/traverse": "^7.22.15",
+		"@babel/types": "^7.22.15",
+		"@vue/compiler-core": "^3.3.4",
+		"@vue/compiler-sfc": "^3.3.4",
+		"babel-core": "^6.26.3",
+		"babel-loader": "^9.1.3",
 		"htmlparser2": "^7.1.1",
 		"http-proxy": "^1.18.1",
 		"md5": "^2.3.0",
 		"posthtml-parser": "^0.10.1",
 		"posthtml-render": "^3.0.0",
+		"prettier": "^3.0.3",
+		"vsce": "^2.15.0",
 		"vue-template-compiler": "^2.6.14"
 	}
 }
