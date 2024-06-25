@@ -2,7 +2,7 @@
 	"name": "sy-i18n",
 	"displayName": "sy-i18n",
 	"description": "翻译",
-	"version": "0.0.3",
+	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.60.0"
 	},
